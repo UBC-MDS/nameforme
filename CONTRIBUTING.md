@@ -1,9 +1,24 @@
-# Contributing
+# Contributing to the NameForMe Package
 
-Contributions are welcome, and they are greatly appreciated! Every little bit
-helps, and credit will always be given.
+Thank you in advance in making contribution to the package. Any suggestions would be greatly appreciated!
+
+## Contributors
+* Daniel Cairns  
+* Eyre Hong  
+* Bruce Wu  
+* Zilong Yi   
 
 ## Types of Contributions
+
+Here, we list several ways in making contribution to this package.
+
+### Fixing typos
+
+Small typos or grammatical errors in documentation may be edited directly using
+the GitHub web interface, so long as the changes are made in the _source_ file.
+
+*  YES: you edit a roxygen comment in a `.R` file below `R/`.
+*  NO: you edit an `.Rd` file below `man/`.
 
 ### Report Bugs
 
@@ -63,11 +78,16 @@ Ready to contribute? Here's how to set up `nameforme` for local development.
 
 Before you submit a pull request, check that it meets these guidelines:
 
-1. The pull request should include additional tests if appropriate.
-2. If the pull request adds functionality, the docs should be updated.
-3. The pull request should work for all currently supported operating systems and versions of Python.
+1. Before you make a substantial pull request, you should always file an issue and
+   make sure someone from the team agrees that it's a problem.
+2. The pull request should be created under a self branch if possible.
+3. If the pull request relates to any of the functions in the package, the documentation should be updated as well.
+4. The pull request should work for all currently supported operating systems and versions of Python.
 
 ## Code of Conduct
 
 Please note that the `nameforme` project is released with a
 Code of Conduct. By contributing to this project you agree to abide by its terms.
+
+## Attribution
+These contributing guidelines were adapted from the [dplyr contributing guidelines](https://github.com/tidyverse/dplyr/blob/master/.github/CONTRIBUTING.md).
