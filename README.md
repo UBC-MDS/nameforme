@@ -1,6 +1,10 @@
 # nameforme
 
-A package used to generate names.
+A package used to generate names based on the [`dateset`](https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-03-22/babynames.csv).
+
+Data: for each year from 1880 to 2017, the number of children of each sex given each name. All names with more than 5 uses are given. (Source: http://www.ssa.gov/oact/babynames/limits.html)
+
+Note that the functionality of this package does not overlap with other packages. However, this package only works for generating English names. 
 
 ## Installation
 
