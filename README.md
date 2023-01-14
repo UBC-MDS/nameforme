@@ -10,7 +10,18 @@ $ pip install nameforme
 
 ## Usage
 
-- TODO
+## Feature
+Note that the name of functions are not finalized. They are subject to change.
+a
+The package is an assimilation of four independent functions:
+
+- find_unisex_name: Generate the a random set of 10 suggested neutral baby names based on the given limitation and baby names in the past years.
+
+- find_old_name: Generate the a random set of 10 suggested neutral(by default) baby names based on the given time period and sex.
+
+- find_similar_name: Generate the a random set of 10 suggested similar baby names based on the syllable of the input name. 
+
+- find_name: Generate the a random set of 10 suggested baby names based on the given limitations.
 
 ## Contributing
 
