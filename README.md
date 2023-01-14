@@ -1,6 +1,10 @@
 # nameforme
 
-A package used to generate names.
+A package used to generate names based on the [`dateset`](https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-03-22/babynames.csv).
+
+Data: for each year from 1880 to 2017, the number of children of each sex given each name. All names with more than 5 uses are given. (Source: http://www.ssa.gov/oact/babynames/limits.html)
+
+Note that the functionality of this package does not overlap with other packages. However, this package only works for generating English names. 
 
 ## Installation
 
@@ -10,7 +14,18 @@ $ pip install nameforme
 
 ## Usage
 
-- TODO
+## Feature
+Note that the name of functions are not finalized. They are subject to change.
+a
+The package is an assimilation of four independent functions:
+
+- find_unisex_name: Generate the a random set of 10 suggested neutral baby names based on the given limitation and baby names in the past years.
+
+- find_old_name: Generate the a random set of 10 suggested neutral(by default) baby names based on the given time period and sex.
+
+- find_similar_name: Generate the a random set of 10 suggested similar baby names based on the syllable of the input name. 
+
+- find_name: Generate the a random set of 10 suggested baby names based on the given limitations.
 
 ## Contributing
 
