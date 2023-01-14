@@ -1,10 +1,10 @@
 # nameforme
 
-A package used to generate names based on the [`dateset`](https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-03-22/babynames.csv).
+A helper python package that can be used to generate names based on the [`dateset`](https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-03-22/babynames.csv). This could be used to come up with baby names, character names, pseudonyms, etc. 
 
-Data: for each year from 1880 to 2017, the number of children of each sex given each name. All names with more than 5 uses are given. (Source: http://www.ssa.gov/oact/babynames/limits.html)
+Source Data: Contains baby names born in the United States for each year from 1880 to 2017, and the number of children of each sex given each name. Names must appear at least 5 times in the each year to be included. (Source: http://www.ssa.gov/oact/babynames/limits.html)
 
-Note that the functionality of this package does not overlap with other packages. However, this package only works for generating English names. 
+This package is similar to this existing [names](https://pypi.org/project/names/) package by Trey Hunner (last updated in 2014), however our uses a more recent dataset (with names up to 2017), and more options for users to customize what type of names to generate, including the ability to generate similar sounding names.
 
 ## Installation
 
