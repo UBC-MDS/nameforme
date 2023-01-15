@@ -1,3 +1,6 @@
+# Authours: Daniel Cairns, Eyre Hong, Bruce Wu, Zilong Yi (UBC MDS)
+# Date: Jan 14th, 2023
+
 def find_old_name(tp,limit=10, sex="uni"):
     """
     Generate the a random set of 10 suggested neutral(by default) baby names 
