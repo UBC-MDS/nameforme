@@ -1,3 +1,6 @@
+# Authours: Daniel Cairns, Eyre Hong, Bruce Wu, Zilong Yi (UBC MDS)
+# Date: Jan 14th, 2023
+
 def find_similar_name(name, limit=10):
     """
     Generate the a random set of 10 suggested similar baby names 

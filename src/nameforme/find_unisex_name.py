@@ -1,3 +1,6 @@
+# Authours: Daniel Cairns, Eyre Hong, Bruce Wu, Zilong Yi (UBC MDS)
+# Date: Jan 14th, 2023
+
 def find_unisex_name(limit=0.2):
     """
     Generate the a random set of 10 suggested neutral baby names 
