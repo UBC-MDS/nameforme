@@ -4,7 +4,7 @@
 from nameforme.nameforme import find_similar_name
 
 def test_output_length():
-    """Test that 10 names are output"""
+    """Test that n names are output"""
     assert len(find_similar_name('Daniel', limit=3)) == 3
     
 def test_names_are_distinct():
