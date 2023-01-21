@@ -1,7 +1,7 @@
 import pandas as pd
 import random
 
-def find_name(sex, init, len):
+def find_name(sex, init, length):
     """
     Generate the a random set of 10 suggested baby names based on the given limitations.
     Parameters
@@ -10,7 +10,7 @@ def find_name(sex, init, len):
         The sex of baby's name 
     init : string
         The initial of baby's name
-    len : int
+    length : int
         The length of baby's name 
     Returns
     -------
@@ -19,7 +19,7 @@ def find_name(sex, init, len):
     Examples
     --------
     >>> find_name('F', 'A', 3)
-    >>> ['Ami', 'Ana', 'Ada', 'Ana', 'Ava', 'Aya', 'Aja', 'Ani', 'Ada', 'Ani']
+    >>> ['Ada', 'Aja', 'Ani', 'Aya', 'Ava', 'Ana', 'Ari', 'Ali', 'Ami', 'Amy']
     """
     # Data loading and cleaning   
     url = "https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-03-22/babynames.csv"
@@ -29,10 +29,13 @@ def find_name(sex, init, len):
     # Filter data based on the arguments
     df_sex = raw_df.loc[raw_df['sex']==sex]
     df_init = df_sex.loc[df_sex['name'].str.startswith(init, na=False)]
-    df_len = df_init.loc[df_init['name'].str.len() == 3]
+    df_len = df_init.loc[df_init['name'].str.len() == length]
     
     # Create name list and randomly select 10 names
-    name_list = df_len['name'].unique()
-    sampled = random.choices(name_list, k=10)    
+    name_list = df_len['name'].unique().tolist()
+    if len(name_list) < 10:
+        sampled = random.sample(name_list, k=len(name_list))
+    else:
+        sampled = random.sample(name_list, k=10)    
     
     return sampled
