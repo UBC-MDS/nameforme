@@ -1,3 +1,6 @@
+# Authours: Daniel Cairns, Eyre Hong, Bruce Wu, Zilong Yi (UBC MDS)
+# Date: Jan 14th, 2023
+
 import pandas as pd
 import random
 
@@ -9,9 +12,9 @@ def find_name(sex, init, length):
     sex: string, 
         The sex of baby's name, either 'F' or 'M' or 'f' or 'm'
     init : string
-        The initial of baby's name, a single character
+        The initial of baby's name, a single alphabet character
     length : int
-        The length of baby's name 
+        The length of baby's name, larager than 0
     Returns
     -------
     list:
@@ -23,15 +26,15 @@ def find_name(sex, init, length):
     """
     # Check input type of sex
     if not isinstance(sex, str):
-        raise TypeError("sex needs to be of str type.")
+        raise TypeError("sex needs to be a str type.")
     
     # Check input type of init
     if not isinstance(init, str):
-        raise TypeError("init needs to be of str type.")
+        raise TypeError("init needs to be a str type.")
 
     # Check input type of length
     if not isinstance(length, int):
-        raise TypeError("length needs to be of int type.")
+        raise TypeError("length needs to be an int type.")
     
     # Check input value of sex
     if not (sex == 'F' or sex == 'M' or sex == 'f' or sex == 'm'):
