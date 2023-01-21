@@ -3,7 +3,7 @@
 
 def find_old_name(tp,limit=10, sex="uni", seed=None):
     """
-    Generate a random set of 10 suggested neutral(by default) baby names 
+    Generate a random set of 10(if there are that many exists) suggested neutral(by default) baby names 
     based on the given time period and sex.
     Parameters
     ----------
@@ -22,13 +22,14 @@ def find_old_name(tp,limit=10, sex="uni", seed=None):
     Examples
     --------
     >>> find_old_name('1980s', seed=123)
-    >>> ['Skylar', 'Azariah', 'Royal', 'Hayden', 'Emerson', 'Rowan', 'Baylor', 'Dakota', 'River', 'Emory']
+    >>> ['Neng','Rashida','Krister','Garry','Kai','Chezare','Dolores','Tyler','Skylar','Tyrie']
     """
     # Load data
     import pandas as pd
     import numpy as np
     URL = "https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-03-22/babynames.csv"
     data = pd.read_csv(URL)
+    # Data wrangling
     data["tp"] = np.select(
         [
             data["year"].between(1880,1890, inclusive="left"),
@@ -63,4 +64,19 @@ def find_old_name(tp,limit=10, sex="uni", seed=None):
             '2010s'
         ]
     )
+    # Setting seed.
+    if seed is not None:
+        np.random.seed(seed)
     
+    df = data[data["tp"]==tp]
+    if sex == "uni":
+        F = df[df["sex"] == 'F']["name"]
+        M = df[df["sex"] == "M"]["name"]
+        uni_df = list(set(F).intersection(set(M)))
+        if len(uni_df) < 10:
+            return uni_df
+        else:
+            return np.random.choice(uni_df, 10, replace=False).tolist()
+    else:
+        df = df[df["sex"] == sex]["name"]
+        return np.random.choice(df,10,replace=False).tolist()
