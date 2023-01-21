@@ -26,6 +26,13 @@ def find_similar_name(match_name, limit=10):
     >>> ['Elisabeth', 'Elliott', 'Ellsworth', 'Emmalynn', 'Ryley']
     """
     
+    # Check inputs
+    if not isinstance(match_name, str):
+        raise TypeError("input name must be a string")
+
+    if not isinstance(limit, int):
+        raise TypeError("Limit must be an integer")
+    
     # Data loading and cleaning
     url = "https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-03-22/babynames.csv"
     raw_df = pd.read_csv(url)
