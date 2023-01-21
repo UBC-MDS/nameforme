@@ -7,16 +7,16 @@ def test_find_similar_name():
     """Test cases for find_similar_name()"""
 
     """Test that n names are output"""
-    assert len(find_similar_name('Daniel', limit=3)) == 3
+    assert len(find_similar_name('Daniel', limit=3)) == 3, "Wrong number of names output"
     
     """Test that there are no duplicate names in output"""
-    assert len(set(find_similar_name('Daniel'))) == 10
+    assert len(set(find_similar_name('Daniel'))) == 10, "Duplicate names in the output"
     
     """Test that repeated calls generate different names"""
     first_call = find_similar_name('Daniel', limit=20)
     second_call = find_similar_name('Daniel', limit=20)
-    assert set(first_call) != set(second_call)
+    assert set(first_call) != set(second_call), "Sucessive calls don't seem random"
 
     """Crude similarity test: checking if first letter matches"""
-    assert "D" in [name[0] for name in find_similar_name('Daniel', 3)]
+    assert "D" in [name[0] for name in find_similar_name('Daniel', 3)], "Doesn't seem like the generated names are similar"
     
