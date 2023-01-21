@@ -9,6 +9,8 @@ def find_old_name(tp,limit=10, sex="uni", seed=None):
     ----------
     tp : string, default 10
         A string specifying time period from 1880 to 2018
+        List of possible qualified inputs:
+        ['1880s','1890s','1900s','1910s','1920s','1930s','1940s','1950s','1960s','1970s','1980s','1990s','2000s','2010s']
     limit : float
         The number of name in the output list. 
     sex : string, default "uni"
