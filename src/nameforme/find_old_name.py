@@ -14,7 +14,9 @@ def find_old_name(tp,limit=10, sex="uni", seed=None):
     limit : float
         The number of name in the output list. 
     sex : string, default "uni"
-        The aimed sex of the name in the ouput. 
+        The aimed sex of the name in the ouput.
+        List of possible qualified inputs:
+        ["uni","M","F] 
     seed : int
         if provided, returns the same random set. 
     Returns
@@ -69,8 +71,8 @@ def find_old_name(tp,limit=10, sex="uni", seed=None):
     # Setting seed.
     if seed is not None:
         np.random.seed(seed)
-    if tp not in ['1880s','1890s','1900s','1910s','1920s','1930s','1940s','1950s','1960s','1970s','1980s','1990s','2000s','2010s']:
-        raise Exception("Sorry, please enter valid time periods!")
+    if tp not in ['1880s','1890s','1900s','1910s','1920s','1930s','1940s','1950s','1960s','1970s','1980s','1990s','2000s','2010s'] or sex not in ["uni",'M','F']:
+        raise Exception("Sorry, please enter valid time periods/sex!")
     
     df = data[data["tp"]==tp]
     if sex == "uni":
