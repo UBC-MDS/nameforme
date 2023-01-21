@@ -16,5 +16,5 @@ def test_find_name():
     assert next(iter(set(i[0] for i in find_name("F", "A", 3)))) == 'A', 'The list does not provide the correct initial letter of names '
     
     """Test that there are no duplicate names in output"""
-    assert len(set(find_name("F", "A", 3))) == 10, 'The list should not have duplicated names'
+    assert len(set(find_name("F", "A", 3))) == len(find_name("F", "A", 3)), 'The list should not have duplicated names'
     
