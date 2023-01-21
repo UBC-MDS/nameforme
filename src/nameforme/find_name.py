@@ -7,7 +7,7 @@ def find_name(sex, init, length):
     Parameters
     ----------
     sex: string, 
-        The sex of baby's name 
+        The sex of baby's name, either 'F' or 'M' or 'f' or 'm'
     init : string
         The initial of baby's name
     length : int
@@ -21,14 +21,30 @@ def find_name(sex, init, length):
     >>> find_name('F', 'A', 3)
     >>> ['Ada', 'Aja', 'Ani', 'Aya', 'Ava', 'Ana', 'Ari', 'Ali', 'Ami', 'Amy']
     """
+    # Check input type of sex
+    if not isinstance(sex, str):
+        raise TypeError("sex needs to be of str type.")
+    
+    # Check input type of init
+    if not isinstance(init, str):
+        raise TypeError("init needs to be of str type.")
+
+    # Check input type of length
+    if not isinstance(length, int):
+        raise TypeError("length needs to be of int type.")
+    
+    # Check input value of sex
+    if not (sex == 'F' or sex == 'M' or sex == 'f' or sex == 'm'):
+        raise Exception("sex should be either 'F/f' or 'M/m'")
+    
     # Data loading and cleaning   
     url = "https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-03-22/babynames.csv"
     raw_df = pd.read_csv(url)
     raw_df = raw_df[raw_df['n'] >= 100] # Keep only names that had at least 100 births for a single gender in a single year
     
     # Filter data based on the arguments
-    df_sex = raw_df.loc[raw_df['sex']==sex]
-    df_init = df_sex.loc[df_sex['name'].str.startswith(init, na=False)]
+    df_sex = raw_df.loc[raw_df['sex'] == sex.capitalize()]
+    df_init = df_sex.loc[df_sex['name'].str.startswith(init.capitalize(), na=False)]
     df_len = df_init.loc[df_init['name'].str.len() == length]
     
     # Create name list and randomly select 10 names
