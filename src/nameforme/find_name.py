@@ -19,7 +19,7 @@ def find_name(sex, init, len):
     Examples
     --------
     >>> find_name('F', 'A', 3)
-    >>> ['Aiden', 'Aaron', 'Asher','Angel','Adam']
+    >>> ['Ami', 'Ana', 'Ada', 'Ana', 'Ava', 'Aya', 'Aja', 'Ani', 'Ada', 'Ani']
     """
     # Data loading and cleaning   
     url = "https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-03-22/babynames.csv"
