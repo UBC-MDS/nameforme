@@ -1,5 +1,5 @@
-# Authours: Daniel Cairns, Eyre Hong, Bruce Wu, Zilong Yi (UBC MDS)
-# Date: Jan 14th, 2023
+import pandas as pd
+import random
 
 def find_name(sex, init, len):
     """
@@ -18,7 +18,21 @@ def find_name(sex, init, len):
         A name list containing random suggested names based on the given limitation.
     Examples
     --------
-    >>> find_name('boy', 'A', 3)
+    >>> find_name('F', 'A', 3)
     >>> ['Aiden', 'Aaron', 'Asher','Angel','Adam']
     """
-    pass
+    # Data loading and cleaning   
+    url = "https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-03-22/babynames.csv"
+    raw_df = pd.read_csv(url)
+    raw_df = raw_df[raw_df['n'] >= 100] # Keep only names that had at least 100 births for a single gender in a single year
+    
+    # Filter data based on the arguments
+    df_sex = raw_df.loc[raw_df['sex']==sex]
+    df_init = df_sex.loc[df_sex['name'].str.startswith(init, na=False)]
+    df_len = df_init.loc[df_init['name'].str.len() == 3]
+    
+    # Create name list and randomly select 10 names
+    name_list = df_len['name'].unique()
+    sampled = random.choices(name_list, k=10)    
+    
+    return sampled
