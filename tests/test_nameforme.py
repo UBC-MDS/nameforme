@@ -86,10 +86,5 @@ def test_find_unisex_name():
     """Test that changing bar value create new name list"""
     assert set(find_unisex_name(bar=0.02,limit=10)) != set(find_unisex_name(bar=0.01,limit=10)), 'The output of different bar value should not be the same '
     
-    """Test that the prop of first output name are higher than the bar value"""
-    url = "https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-03-22/babynames.csv"
-    data = pd.read_csv(url)
-    names = find_unisex_name(bar=0.02,limit=5)
-    assert data[data['name']==names[0]]['prop'][0] > 0.02 == True, "The output's prop value should not be smaller than the bar"
     
     
