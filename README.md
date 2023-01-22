@@ -6,18 +6,7 @@ Source Data: Contains baby names born in the United States for each year from 18
 
 This package is similar to this existing [names](https://pypi.org/project/names/) package by Trey Hunner (last updated in 2014), however our uses a more recent dataset (with names up to 2017), and more options for users to customize what type of names to generate, including the ability to generate similar sounding names.
 
-## Installation
-
-```bash
-$ pip install nameforme
-```
-
-## Usage
-
-- This section will be updated later.
-
-
-## Feature
+## Features
 Note that the name of functions are not finalized. They are subject to change.
 
 The package is an assimilation of four independent functions:
@@ -29,6 +18,36 @@ The package is an assimilation of four independent functions:
 - `find_similar_name`: Generate the a random set of 10 suggested similar baby names based on the syllable of the input name. 
 
 - `find_name`: Generate the a random set of 10 suggested baby names based on the given limitations.
+
+## Installation
+
+```bash
+$ pip install nameforme
+```
+
+## Usage
+
+Below is a basic example of how to use each of the four functions included in this package.
+
+```
+# Load all required package functions
+from nameforme.nameforme import find_name
+from nameforme.nameforme import find_old_name
+from nameforme.nameforme import find_similar_name
+from nameforme.nameforme import find_unisex_name
+
+# Generate the a random set of 10 suggested baby names based on the given limitations.
+find_name("F", "A", 3)
+
+# Generate a random set of 10(if there are that many exists) suggested neutral(by default) baby names based on the given time period and sex.
+find_old_name('1980s', limit=3)
+
+# Generate a random list of names that sound similar to a given user input name.
+find_similar_name('Daniel', limit=20)
+
+# Generate the a random set of 10 suggested neutral baby names based on the given limitation and baby names in the past years.
+find_unisex_name(bar=0.02,limit=10)
+```
 
 ## Dependencies
 - python = "3.9"
