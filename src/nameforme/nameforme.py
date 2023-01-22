@@ -152,10 +152,10 @@ def find_old_name(tp,limit=10, sex="uni", seed=None):
         if len(uni_df) < 10:
             return uni_df
         else:
-            return np.random.choice(uni_df, 10, replace=False).tolist()
+            return np.random.choice(uni_df, limit, replace=False).tolist()
     else:
         df = df[df["sex"] == sex]["name"]
-        return np.random.choice(df,10,replace=False).tolist()
+        return np.random.choice(df,limit,replace=False).tolist()
     
 
 def find_similar_name(match_name, limit=10):
