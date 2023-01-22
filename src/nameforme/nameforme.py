@@ -247,10 +247,11 @@ def find_unisex_name(bar,limit=10):
             target_names.append(girl_name)
     
     # Create name list
-    if len(target_names) == 0:
-        raise Exception("Please lower the bar value")
+    common_unisex_names=['Skylar', 'Azariah', 'Royal', 'Hayden', 'Emerson', 
+                         'Rowan', 'Baylor', 'Dakota', 'River', 'Emory','Jessie',
+                         'Marion','Jackie','Alva','Ollie','Jodie','Cleo','Kerry']
     if len(target_names) < limit:
-        result = target_names
+        result = target_names + np.random.choice(common_unisex_names, limit-len(target_names), replace=False).tolist()
     else:
         result = np.random.choice(target_names, limit, replace=False).tolist()
     
