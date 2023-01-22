@@ -31,10 +31,11 @@ The package is an assimilation of four independent functions:
 - `find_name`: Generate the a random set of 10 suggested baby names based on the given limitations.
 
 ## Dependencies
-- python 3.9
-- numpy 1.24.1
-- pandas 1.5.3
-- jellyfish 0.9.0
+- python = "3.9"
+- numpy = "1.24.1"
+- pandas = "1.5.3"
+- jellyfish = "0.9.0"
+- pytest = "7.2.1"
 
 ## Contributing
 
