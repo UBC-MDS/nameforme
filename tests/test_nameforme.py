@@ -45,12 +45,12 @@ def test_find_old_name():
     """Test that repeated calls with seed given generate same names"""
     first_call = find_old_name('1980s', seed=123)
     second_call = find_old_name('1980s', seed=123)
-    assert set(first_call) != set(second_call), 'The lists generated with given seed are not the same.'
+    assert set(first_call) == set(second_call), 'The lists generated with given seed are not the same.'
     
     """Test that name is actually of given sex"""
     URL = "https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-03-22/babynames.csv"
     data = pd.read_csv(URL)
-    data = data[data["sex"] == "M"]
+    data = data[data["sex"] == "M"]["name"]
     out = find_old_name('1980s', sex='M')
     assert sum([ _ in list(data) for _ in find_old_name('1980s', sex='M')]) == len(out), "Does not give name of right sex."
     
