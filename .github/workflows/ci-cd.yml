@@ -20,11 +20,11 @@ jobs:
         
     steps:
     # Step 2. Set up Python 3.9
-    - uses: actions/setup-python@v2
+    - uses: actions/setup-python@v4
       with:
         python-version: 3.9
     # Step 3. Check-out repository so we can access its contents
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     # Step 4. Install poetry
     - uses: snok/install-poetry@v1
     # Step 5. Install our package
@@ -34,7 +34,7 @@ jobs:
     - name: Test with pytest
       run: poetry run pytest tests/ --cov=nameforme --cov-report=xml
     # Step 7. Upload coverage to Codecov
-    - uses: codecov/codecov-action@v2
+    - uses: codecov/codecov-action@v3
       with:
         files: ./coverage.xml   # coverage report
         fail_ci_if_error: true  # terminate workflow if there's an error
@@ -51,11 +51,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     # Step 2. Set up Python 3.9
-    - uses: actions/setup-python@v2
+    - uses: actions/setup-python@v4
       with:
         python-version: 3.9
     # Step 3. Check-out repository so we can access its contents
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
       with:
         fetch-depth: 0
     # Step 4. Use PSR to make release
