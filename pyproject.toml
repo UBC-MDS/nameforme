@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "nameforme"
-version = "1.0.0"
+version = "0.0.1"
 description = "A package used to generate names."
 authors = ["Daniel Cairns, Eyre Hong, Bruce Wu, Zilong Yi (UBC MDS)"]
 license = "MIT"
@@ -22,6 +22,7 @@ jupyter = "^1.0.0"
 myst-nb = {version = "^0.17.1", python = "^3.9"}
 sphinx-autoapi = "^2.0.1"
 sphinx-rtd-theme = "^1.1.1"
+python-semantic-release = "^7.33.0"
 
 [tool.semantic_release]
 version_variable = "pyproject.toml:version" # version location
