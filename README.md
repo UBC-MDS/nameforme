@@ -55,6 +55,7 @@ find_unisex_name(bar=0.02,limit=10)
 - pandas = "1.5.3"
 - jellyfish = "0.9.0"
 - pytest = "7.2.1"
+- sphinx = "6.1.3"
 
 ## Contributing
 
