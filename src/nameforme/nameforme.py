@@ -40,18 +40,18 @@ def find_name(sex, init, length):
     
     # Check input value of sex
     if not (sex == 'F' or sex == 'M' or sex == 'f' or sex == 'm'):
-        raise Exception("sex should be either 'F/f' or 'M/m'")
+        raise Exception("sex should be either 'F'/'f' or 'M'/'m'.")
     
     # Check input value of init
     if not (len(init) == 1):
-        raise Exception("init should be a single character")
+        raise Exception("init should be a single character.")
     
     if not (str.isalpha(init)):
-        raise Exception("init should be an alphabet")
+        raise Exception("init should be an alphabet.")
     
     # Check input value of length
     if length <= 0:
-        raise Exception("length should be larger than 0")
+        raise Exception("length should be larger than 0.")
     
     # Data loading and cleaning   
     url = "https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-03-22/babynames.csv"
