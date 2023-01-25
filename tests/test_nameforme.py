@@ -12,6 +12,29 @@ import pytest
 def test_find_name():
     """Test cases for find_name()"""
     
+    """Test the input types"""
+    with pytest.raises(TypeError, match = "sex needs to be a str type."):
+        find_name(1, "A", 3)
+    
+    with pytest.raises(TypeError, match = "init needs to be a str type."):
+        find_name("F", 5, 3)
+    
+    with pytest.raises(TypeError, match = "length needs to be an int type."):
+        find_name("F", "A", "a")
+    
+    """Test the input values"""
+    with pytest.raises(Exception, match = "sex should be either 'F'/'f' or 'M'/'m'."):
+        find_name("a", "A", 3) 
+        
+    with pytest.raises(Exception, match = "init should be a single character."):
+        find_name("F", "qw", 3)   
+        
+    with pytest.raises(Exception, match = "init should be an alphabet."):
+        find_name("F", "?", 3)
+        
+    with pytest.raises(Exception, match = "length should be larger than 0."):
+        find_name("F", "A", 0)    
+    
     """Test that the names are in the same length"""
     assert len(set(len(i) for i in find_name("F", "A", 3))) == 1, 'The list provides different length of names'
     
@@ -25,7 +48,11 @@ def test_find_name():
     assert next(iter(set(i[0] for i in find_name("F", "A", 3)))) == 'A', 'The list does not provide the correct initial letter of names '
     
     """Test that there are no duplicate names in output"""
-    assert len(set(find_name("F", "A", 3))) == len(find_name("F", "A", 3)), 'The list should not have duplicated names'
+    assert len(set(find_name("F", "A", 3))) == 10, 'The list should not have duplicated names'
+    
+    """Test that the output list size"""
+    assert len(find_name("F", "A", 1)) == 0, 'The list cannot has 10 output if the names does not exist'
+    
     
 
 def test_find_old_name():
