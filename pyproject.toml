@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "nameforme"
-version = "0.0.8"
+version = "0.0.9"
 description = "A package used to generate names."
 authors = ["Daniel Cairns, Eyre Hong, Bruce Wu, Zilong Yi (UBC MDS)"]
 license = "MIT"
