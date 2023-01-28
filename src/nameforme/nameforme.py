@@ -226,7 +226,7 @@ def find_unisex_name(bar,limit=10):
     Examples
     --------
     >>> limit=0.0001
-    >>> find_unisex_name(limit)
+    >>> find_unisex_name(0.002,limit=10)
     >>> ['Skylar', 'Azariah', 'Royal', 'Hayden', 'Emerson', 'Rowan', 'Baylor', 'Dakota', 'River', 'Emory']
     """
     
