@@ -41,7 +41,7 @@ jobs:
     # Step 8. Build documentation
     - name: Build documentation
       run: poetry run make html --directory docs/
-        
+           
   cd:
     # Only run this job if the "ci" job passes
     needs: ci
