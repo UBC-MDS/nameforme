@@ -225,8 +225,8 @@ def find_unisex_name(bar,limit=10):
         If the length of the word list is less than the limitation, it will return all the names in the word list
     Examples
     --------
-    >>> limit=0.0001
-    >>> find_unisex_name(limit)
+    >>> limit=10
+    >>> find_unisex_name(0.2,limit)
     >>> ['Skylar', 'Azariah', 'Royal', 'Hayden', 'Emerson', 'Rowan', 'Baylor', 'Dakota', 'River', 'Emory']
     """
     
