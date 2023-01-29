@@ -2,6 +2,13 @@
 
 <!--next-version-placeholder-->
 
+## v1.0.0 (2023-01-29)
+### Feature
+* New changes ([`bb076da`](https://github.com/UBC-MDS/nameforme/commit/bb076dae22d669fc7dd0f3f61130535a2670dedd))
+
+### Breaking
+* new changes ([`bb076da`](https://github.com/UBC-MDS/nameforme/commit/bb076dae22d669fc7dd0f3f61130535a2670dedd))
+
 ## v0.3.1 (2023-01-29)
 
 
