@@ -1,6 +1,7 @@
-[![ci-cd](https://github.com/UBC-MDS/nameforme/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/UBC-MDS/nameforme/actions/workflows/ci-cd.yml)
-
+[![ci-cd](https://github.com/UBC-MDS/nameforme/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/UBC-MDS/nameforme/actions/workflows/ci-cd.yml) 
+[![docs](https://readthedocs.org/projects/nameforme/badge/?version=main)](https://readthedocs.org/projects/nameforme/badge/?version=main)
 [![codecov](https://codecov.io/gh/UBC-MDS/nameforme/branch/main/graph/badge.svg?token=vKUSBGopdL)](https://codecov.io/gh/UBC-MDS/nameforme)
+
 # nameforme
 
 A helper python package that can be used to generate names based on the [`dateset`](https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-03-22/babynames.csv). This could be used to come up with baby names, character names, pseudonyms, etc. 
