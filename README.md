@@ -48,6 +48,10 @@ find_name("m", "b", length=9)
 find_old_name('1980s', limit=3)
 
 # Generate a random list of names that sound similar to a given user input name.
+[![ci-cd](https://github.com/UBC-MDS/nameforme/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/UBC-MDS/nameforme/actions/workflows/ci-cd.yml)
+
+[![codecov](https://codecov.io/gh/UBC-MDS/nameforme/branch/main/graph/badge.svg?token=vKUSBGopdL)](https://codecov.io/gh/UBC-MDS/nameforme)
+
 find_similar_name('Daniel', limit=20)
 
 # Generate the a random set of suggested neutral baby names based on the given limitation and baby names in the past years.
