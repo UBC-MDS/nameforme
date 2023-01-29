@@ -2,6 +2,9 @@
 
 <!--next-version-placeholder-->
 
+## v0.3.1 (2023-01-29)
+
+
 ## v0.3.0 (2023-01-29)
 ### Feature
 * **new:** Updated readme. BREAKING CHANGE ([`4f60495`](https://github.com/UBC-MDS/nameforme/commit/4f6049568f08564a2bcf83919f3230f15da3cf9a))
