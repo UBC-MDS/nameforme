@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v1.1.0 (2023-01-29)
+### Feature
+* **new:** Updated readme. ([`c168b59`](https://github.com/UBC-MDS/nameforme/commit/c168b59a67bd1f9c8e5ee078099e39087245e09f))
+
 ## v1.0.0 (2023-01-29)
 ### Feature
 * New changes ([`bb076da`](https://github.com/UBC-MDS/nameforme/commit/bb076dae22d669fc7dd0f3f61130535a2670dedd))
