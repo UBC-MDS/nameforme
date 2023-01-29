@@ -1,7 +1,6 @@
 [![ci-cd](https://github.com/UBC-MDS/nameforme/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/UBC-MDS/nameforme/actions/workflows/ci-cd.yml) 
 [![docs](https://readthedocs.org/projects/nameforme/badge/?version=main)](https://readthedocs.org/projects/nameforme/badge/?version=main)
 [![codecov](https://codecov.io/gh/UBC-MDS/nameforme/branch/main/graph/badge.svg?token=vKUSBGopdL)](https://codecov.io/gh/UBC-MDS/nameforme)
-[![PyPI version](https://badge.fury.io/py/nameforme.svg)](https://badge.fury.io/py/nameforme)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 # nameforme
